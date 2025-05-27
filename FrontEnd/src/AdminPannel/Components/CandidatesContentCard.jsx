@@ -1,5 +1,5 @@
 import React from "react";
-import "../candidates.css";
+import "../Candidates.css";
 
 const CandidatesContentSection = () => {
   // Sample candidate data - you'll replace this with your own data
