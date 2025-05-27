@@ -1,0 +1,246 @@
+/* Container and Layout */
+.container {
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.maxWidthMd {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.mb8 {
+  margin-bottom: 2rem;
+}
+
+/* Typography */
+.text2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.fontSemibold {
+  font-weight: 600;
+}
+
+.textGray900 {
+  color: #1a202c;
+}
+
+.mt2 {
+  margin-top: 0.5rem;
+}
+
+.textSm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.textGray600 {
+  color: #4a5568;
+}
+
+.fontMedium {
+  font-weight: 500;
+}
+
+.textGray700 {
+  color: #4a5568;
+}
+
+.textGreen600 {
+  color: #38a169;
+}
+
+.textGreen700 {
+  color: #2f855a;
+}
+
+.textWhite {
+  color: white;
+}
+
+/* Backgrounds */
+.bgWhite {
+  background-color: white;
+}
+
+.bgGreen50 {
+  background-color: #f0fff4;
+}
+
+.bgGray50 {
+  background-color: #f9fafb;
+}
+
+.bgGreen500 {
+  background-color: #48bb78;
+}
+
+.hoverBgGray100:hover {
+  background-color: #f3f4f6;
+}
+
+.hoverBgGreen600:hover {
+  background-color: #38a169;
+}
+
+/* Borders */
+.border {
+  border-width: 1px;
+}
+
+.border2 {
+  border-width: 2px;
+}
+
+.borderGray100 {
+  border-color: #f7fafc;
+}
+
+.borderGray200 {
+  border-color: #e2e8f0;
+}
+
+.borderGreen200 {
+  border-color: #c6f6d5;
+}
+
+.roundedMd {
+  border-radius: 0.375rem;
+}
+
+.roundedXl {
+  border-radius: 0.75rem;
+}
+
+/* Shadows */
+.shadowSm {
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Spacing */
+.p8 {
+  padding: 2rem;
+}
+
+.py2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mb6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb1 {
+  margin-bottom: 0.25rem;
+}
+
+.mt6 {
+  margin-top: 1.5rem;
+}
+
+.mt4 {
+  margin-top: 1rem;
+}
+.ml4 {
+  margin-left: 1rem;
+}
+
+/* Flexbox */
+.flex {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.gap2 {
+  gap: 0.5rem;
+}
+
+/* Transitions */
+.transitionAll {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Input and Focus Styles */
+.wFull {
+  width: 100%;
+}
+
+.focusOutlineNone:focus {
+  outline: none;
+}
+
+.focusRing2:focus {
+  box-shadow: 0 0 0 2px rgba(167, 243, 208, 0.5);
+}
+
+.focusRingGreen100:focus {
+  --tw-ring-color: rgba(167, 243, 208, 0.5);
+}
+
+/* Buttons */
+.hoverTextGreen700:hover {
+  color: #2f855a;
+}
+
+/* Space Between Elements */
+.spaceY4 > * + * {
+  margin-top: 1rem;
+}
+
+/* Spinner: */
+.spinner_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top-color: #007bff;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

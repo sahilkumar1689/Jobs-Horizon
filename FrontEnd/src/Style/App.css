@@ -1,0 +1,334 @@
+/* Dropdown Button */
+.dropbtn {
+  background-color: #89ba16;
+  color: white;
+  padding-bottom: 7px;
+  font-size: 25px;
+  border: none;
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+  border-radius: 50%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: rgba(245, 245, 245, 0.943);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+/* Links inside the dropdown */
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-radius: 10px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdownContent a:hover {
+  background-color: #e1fcce;
+}
+
+/* Show the dropdown menu on hover */
+.dropdownContainer:hover .dropdownContent {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdownContainer:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Job Cards: */
+
+/* Job Container Styles */
+.job-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Job Card Styles */
+.job-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.job-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #4caf50 0%, #2e7d32 100%);
+  border-radius: 4px 0 0 4px;
+}
+
+.job-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Header */
+.job-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.company-info {
+  flex: 1;
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.company-name {
+  font-size: 14px;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* Job Details */
+.job-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.job-detail-item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  /* width: 130px; */
+  color: #718096;
+  background-color: #f5f7fa;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.job-detail-item svg {
+  margin-right: 6px;
+  color: #4caf50;
+}
+
+/* Job Description */
+.job-description {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 16px;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.skill-tag {
+  font-size: 12px;
+  background: rgba(76, 175, 80, 0.1);
+  color: #2e7d32;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Card Footer */
+.job-card-footer {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.apply-button {
+  flex: 1;
+  background: linear-gradient(90deg, #4caf50 0%, #2e7d32 100%);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.apply-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/*  Table Css: */
+
+.table-wrapper {
+  max-width: 1200px;
+  margin: 50px auto; /* Top and bottom spacing */
+  padding: 0 20px; /* Left and right spacing */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #f3f4f6;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  font-weight: 600;
+  color: #333;
+}
+
+td img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  display: inline-block;
+}
+
+.status-accepted {
+  background-color: #28a745;
+}
+
+.status-rejected {
+  background-color: #dc3545;
+}
+
+/* Pagination styles */
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.pagination button.active {
+  background-color: #00d22a;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Spinner: */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top-color: #007bff;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

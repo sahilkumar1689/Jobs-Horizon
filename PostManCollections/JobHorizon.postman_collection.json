@@ -1,0 +1,717 @@
+{
+	"info": {
+		"_postman_id": "def2f71c-27c7-497e-b6e8-f246199442b2",
+		"name": "JobHorizon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34242583"
+	},
+	"item": [
+		{
+			"name": "AuthFolder",
+			"item": [
+				{
+					"name": "RegisterUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{companyToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"oser\",\r\n    \"lastName\":\"service\",\r\n    \"email\":\"o7@gmail.com\",\r\n    \"password\":\"12345678\",\r\n    \"userType\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}auth/registerUser",
+							"host": [
+								"{{baseUrl}}auth"
+							],
+							"path": [
+								"registerUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rahil@gmail.com\",\r\n    \"password\":\"111111111\",\r\n    \"userType\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}auth/loginUser",
+							"host": [
+								"{{baseUrl}}auth"
+							],
+							"path": [
+								"loginUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sahil@gmail.com\",\r\n    \"newPassword\":\"1010101010\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}auth/changePassword",
+							"host": [
+								"{{baseUrl}}auth"
+							],
+							"path": [
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GetDetailsFolder",
+			"item": [
+				{
+					"name": "GetStudentDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{studentToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}details/getStdData",
+							"host": [
+								"{{baseUrl}}details"
+							],
+							"path": [
+								"getStdData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCompanyDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{companyToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}details/getCompanyData",
+							"host": [
+								"{{baseUrl}}details"
+							],
+							"path": [
+								"getCompanyData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompanyAddedJobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{companyToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}details/companyAddedJobs",
+							"host": [
+								"{{baseUrl}}details"
+							],
+							"path": [
+								"companyAddedJobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "studentAppliedJobs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{studentToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}details/studentAppliedJobs",
+							"host": [
+								"{{baseUrl}}details"
+							],
+							"path": [
+								"studentAppliedJobs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UpdatedFolder",
+			"item": [
+				{
+					"name": "StudentUpdates",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{studentToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bio\":\"Hello My Name is Sahil Kumar.\",\r\n    \"contact\":9878913589,\r\n    \"currentLocation\":\"JJjalandhar,Punjab\",\r\n    \"qualification\":[\r\n        {\r\n            \"courseName\":\"10th\",\r\n            \"instituteName\":\"Kids Paradise school\",\r\n            \"startingYear\":2018,\r\n            \"passingYear\":2019,\r\n            \"percentage\":85,\r\n            \"backlog\":false\r\n        },\r\n        {\r\n            \"courseName\":\"12th\",\r\n            \"instituteName\":\"Govt. Model Senior Secendory\",\r\n            \"startingYear\":2020,\r\n            \"passingYear\":2021,\r\n            \"percentage\":88,\r\n            \"backlog\":false\r\n        }\r\n    ],\r\n    \"experience\":[\r\n        {\r\n            \"company\":\"comp1\",\r\n            \"role\":\"FullStack Developer\",\r\n            \"duration\":\"1 Year\"\r\n        }\r\n    ],\r\n    \"skills\":[\"68126e8593276e14c4ab6f4a\",\"68126eac93276e14c4ab6f4d\"],\r\n    \"preferLocation\":[\"6812770249a198c881be5e3e\",\"6812772749a198c881be5e41\"]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}updates/studentUpdates",
+							"host": [
+								"{{baseUrl}}updates"
+							],
+							"path": [
+								"studentUpdates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompanyUpdates",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{companyToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\":[\"6812770249a198c881be5e3e\",\"6812772749a198c881be5e41\"],\r\n    \"companyName\":\"planetSpark\",\r\n    \"description\":\"PlanetSpark is the fintech company situated in Gurugram.\",\r\n    \"websiteUrl\":\"https://www.planetSpark.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}updates/companyUpdates",
+							"host": [
+								"{{baseUrl}}updates"
+							],
+							"path": [
+								"companyUpdates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CandidateSelection",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb21wYW55SWQiOiI2ODEyOGFlNzRkNTI5OTgxNDhkZmY4ZTYiLCJ1c2VyVHlwZSI6MiwiaWF0IjoxNzQ2MTI3NzIwLCJleHAiOjE3NDYxNTc3MjB9.4qXC6GU3n7Nf4ygfxeoDE1nJUuqRyR88ZjDITE7pMSw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobId\":\"681290c9a05c76fbae035e7e\",\r\n    \"studentId\":\"681281e449a198c881be5e4a\",\r\n    \"result\":\"Accepted\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}updates/candidateSelection",
+							"host": [
+								"{{baseUrl}}updates"
+							],
+							"path": [
+								"candidateSelection"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PostJob",
+			"item": [
+				{
+					"name": "addJob",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response time is within acceptable range\", function () {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response has the required field - message\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.message).to.exist;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Message is a non-empty string\", function () {\r",
+									"  const responseData = pm.response.json();\r",
+									"  \r",
+									"  pm.expect(responseData).to.be.an('object');\r",
+									"  pm.expect(responseData.message).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Message should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Content-Type header is application/json\", function () {\r",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{companyToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "BackEnd Developer",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "we need a back-end developer for daily tasks",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "681c600932c1f9a73df0303b",
+									"type": "text"
+								},
+								{
+									"key": "empStatus",
+									"value": "FullTime",
+									"type": "text"
+								},
+								{
+									"key": "experience",
+									"value": "0-1 Year",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "15-20K",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Any",
+									"type": "text"
+								},
+								{
+									"key": "deadlinedate",
+									"value": "30-04-2025",
+									"type": "text"
+								},
+								{
+									"key": "vacancy",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "jobImg",
+									"type": "file",
+									"src": "/C:/Users/Dell/Desktop/Images/job_logo_4.jpg"
+								},
+								{
+									"key": "roleAndResponsibility",
+									"value": "one two three",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "skills",
+									"value": "681c5e9332c1f9a73df03033",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}add/postJob",
+							"host": [
+								"{{baseUrl}}add"
+							],
+							"path": [
+								"postJob"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JobAppliedFolder",
+			"item": [
+				{
+					"name": "JobApplied",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{studentToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobAppliedId\":\"681290c9a05c76fbae035e7e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}applied/appliedJob",
+							"host": [
+								"{{baseUrl}}applied"
+							],
+							"path": [
+								"appliedJob"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JobDetails",
+			"item": [
+				{
+					"name": "SpecificJobDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}jobs/specificJob/681290c9a05c76fbae035e7e",
+							"host": [
+								"{{baseUrl}}jobs"
+							],
+							"path": [
+								"specificJob",
+								"681290c9a05c76fbae035e7e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getJobPaginate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}jobs/getAllPaginate?page=1&limit=2",
+							"host": [
+								"{{baseUrl}}jobs"
+							],
+							"path": [
+								"getAllPaginate"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ContactUsFolder",
+			"item": [
+				{
+					"name": "ContactUs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Shil\",\r\n    \"lastName\":\"Kumar\",\r\n    \"email\":\"sahl@gmail.com\",\r\n    \"contact\":1234567890,\r\n    \"message\":\"Testing message\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}additional/contactUs",
+							"host": [
+								"{{baseUrl}}additional"
+							],
+							"path": [
+								"contactUs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Add Skill and Location",
+			"item": [
+				{
+					"name": "Add Skill",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{adminToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"skillName\":\"MEAN\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}add/skill",
+							"host": [
+								"{{baseUrl}}add"
+							],
+							"path": [
+								"skill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"locationName\": \"Mohali\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}add/location",
+							"host": [
+								"{{baseUrl}}add"
+							],
+							"path": [
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSkills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}get/skills",
+							"host": [
+								"{{baseUrl}}get"
+							],
+							"path": [
+								"skills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLocations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}get/locations",
+							"host": [
+								"{{baseUrl}}get"
+							],
+							"path": [
+								"locations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
