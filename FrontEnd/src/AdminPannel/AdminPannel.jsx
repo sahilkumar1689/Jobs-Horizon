@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Components/Header";
 import Sidebar from "./Components/Sidebar";
-import Dashboard from "./Components/Dashboard";
+import Dashboard from "./Components/DashBoard";
 import CandidateContent from "./Components/CandidateContent";
 import RecuiterContent from "./Components/RecuiterContent";
 import TaskListContent from "./Components/TaskListContent";
