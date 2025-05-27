@@ -81,13 +81,15 @@ cd 6M_2025_MERN_JobHorizon_Sahil
 
 ### 2. Set Up the Server
 
-cd folder <br>
+cd folderName <br>
 npm install <br>
 
 <li>Create a .env file in the server directory with the following content:</li>
 <br>
 PORT=5000
+<br>
 MONGO_URI=your_mongo_connection_string
+<br>
 JWT_SECRET=your_jwt_secret_key
 <br>
 <br>
@@ -105,25 +107,6 @@ npm start <br>
 cd ../FrontEnd <br>
 npm install <br>
 npm run dev <br>
-
-### 5. Env Variable:
-
-<br>
-DataBaseUrl=mongodb+srv://sahilkumar32755:jobhorizon@cluster0.8h5hnjk.mongodb.net
-PORT=8080
-<br>
-JWT_SECRET=thisisthejwtscrete
-<br>
-CLOUDINARY_NAME =drvoljz3a
-<br>
-CLOUDINARY_API_KEY =363142586582276
-<br>
-CLOUDINARY_API_SECRET=wVHXu4BIpJQPsrJ6jdSAYaC1Aac
-<br>
-Mailer_Email ="sahilKumar32755@gmail.com"
-<br>
-Mailer_Pass ="nvtv hfbb anef nece"
-<br>
 
 🤝 Contributing <br>
 Feel free to fork this repository, improve the code, and submit pull requests. All contributions are welcome!
